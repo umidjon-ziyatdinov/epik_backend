@@ -4,14 +4,10 @@ const bodyParser = require("body-parser");
 const connectDatabase = require("./db");
 const cors = require("cors")
 
-app.use(cors({
-  origin: ['http://localhost:3000',],
-  credentials: true
-}));
+app.use(cors());
 
 app.use(express.json());
 app.use("/test", (req, res) => {
-  console.log('i am running')
   res.send("Hello world!");
 });
 
